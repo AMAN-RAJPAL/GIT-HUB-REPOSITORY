@@ -1,0 +1,347 @@
+[
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "HandDetector",
+        "importPath": "cvzone.HandTrackingModule",
+        "description": "cvzone.HandTrackingModule",
+        "isExtraImport": true,
+        "detail": "cvzone.HandTrackingModule",
+        "documentation": {}
+    },
+    {
+        "label": "mediapipe",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mediapipe",
+        "description": "mediapipe",
+        "detail": "mediapipe",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "add_trade_fair",
+        "kind": 2,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "def add_trade_fair():\n    name = input(\"Enter the name of the trade fair: \")\n    date = input(\"Enter the date (YYYY-MM-DD)-(YYYY-MM-DD): \")\n    location = input(\"Enter the location: \")\n    tickets_available = int(input(\"Enter the number of available tickets: \"))\n    ticket_price = float(input(\"Enter the ticket price: $\"))\n    trade_fair = {\n        \"name\": name,\n        \"date\": date,\n        \"location\": location,",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "list_trade_fairs",
+        "kind": 2,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "def list_trade_fairs():\n    if not trade_fairs_db:\n        print(\"No trade fairs available.\")\n    else:\n        print(\"\\nAvailable Trade Fairs:\")\n        for i, trade_fair in enumerate(trade_fairs_db, start=1):\n            print(f\"{i}. {trade_fair['name']} ({trade_fair['date']}) - {trade_fair['location']}\")\n# Function to book tickets for a trade fair\ndef book_ticket():\n    list_trade_fairs()",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "book_ticket",
+        "kind": 2,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "def book_ticket():\n    list_trade_fairs()\n    if not trade_fairs_db:\n        return\n    try:\n        choice = int(input(\"Enter the number of the trade fair you want to book tickets for: \"))\n        if 1 <= choice <= len(trade_fairs_db):\n            trade_fair = trade_fairs_db[choice - 1]\n            print(f\"Booking for {trade_fair['name']} ({trade_fair['date']})\")\n            tickets_requested = int(input(\"Enter the number of tickets you want to book: \"))",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "process_payment",
+        "kind": 2,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "def process_payment(booking_id, amount):\n    # Simulate a payment transaction here\n    # In a real application, use a payment gateway like Stripe, PayPal, etc.\n    return True\n@app.route('/', methods=['GET', 'POST'])\ndef book_trade_fair():\n    if request.method == 'POST':\n        trade_fair = request.form.get('trade_fair')\n        booth_type = request.form.get('booth_type')\n        num_booths = int(request.form.get('num_booths'))",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "book_trade_fair",
+        "kind": 2,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "def book_trade_fair():\n    if request.method == 'POST':\n        trade_fair = request.form.get('trade_fair')\n        booth_type = request.form.get('booth_type')\n        num_booths = int(request.form.get('num_booths'))\n        amount = num_booths * 500  # Replace with your pricing logic\n        # Simulate payment processing\n        if process_payment(len(bookings) + 1, amount):\n            bookings.append({\n                'trade_fair': trade_fair,",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "success",
+        "kind": 2,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "def success():\n    return \"Booking successful!\"\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "trade_fairs_db",
+        "kind": 5,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "trade_fairs_db = []\n# Function to add a new trade fair\ndef add_trade_fair():\n    name = input(\"Enter the name of the trade fair: \")\n    date = input(\"Enter the date (YYYY-MM-DD)-(YYYY-MM-DD): \")\n    location = input(\"Enter the location: \")\n    tickets_available = int(input(\"Enter the number of available tickets: \"))\n    ticket_price = float(input(\"Enter the ticket price: $\"))\n    trade_fair = {\n        \"name\": name,",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "app = Flask(__name__)\n# Dummy list to store bookings (in a real application, use a database)\nbookings = []\n# Replace with your actual payment gateway integration\ndef process_payment(booking_id, amount):\n    # Simulate a payment transaction here\n    # In a real application, use a payment gateway like Stripe, PayPal, etc.\n    return True\n@app.route('/', methods=['GET', 'POST'])\ndef book_trade_fair():",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "bookings",
+        "kind": 5,
+        "importPath": "code to book tickets for confirmation of tickets trade fair",
+        "description": "code to book tickets for confirmation of tickets trade fair",
+        "peekOfCode": "bookings = []\n# Replace with your actual payment gateway integration\ndef process_payment(booking_id, amount):\n    # Simulate a payment transaction here\n    # In a real application, use a payment gateway like Stripe, PayPal, etc.\n    return True\n@app.route('/', methods=['GET', 'POST'])\ndef book_trade_fair():\n    if request.method == 'POST':\n        trade_fair = request.form.get('trade_fair')",
+        "detail": "code to book tickets for confirmation of tickets trade fair",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "code to identify left and right hand",
+        "description": "code to identify left and right hand",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\ndetector = HandDetector(detectionCon=0.8, maxHands=2)\nwhile True:\n    success, img = cap.read()\n    hands, img = detector.findHands(img)  # With Draw\n    # hands = detector.findHands(img, draw=False)  # No Draw\n    if hands:\n        # Hand 1\n        hand1 = hands[0]\n        lmList1 = hand1[\"lmList\"]  # List of 21 Landmarks points",
+        "detail": "code to identify left and right hand",
+        "documentation": {}
+    },
+    {
+        "label": "detector",
+        "kind": 5,
+        "importPath": "code to identify left and right hand",
+        "description": "code to identify left and right hand",
+        "peekOfCode": "detector = HandDetector(detectionCon=0.8, maxHands=2)\nwhile True:\n    success, img = cap.read()\n    hands, img = detector.findHands(img)  # With Draw\n    # hands = detector.findHands(img, draw=False)  # No Draw\n    if hands:\n        # Hand 1\n        hand1 = hands[0]\n        lmList1 = hand1[\"lmList\"]  # List of 21 Landmarks points\n        bbox1 = hand1[\"bbox\"]  # Bounding Box info x,y,w,h",
+        "detail": "code to identify left and right hand",
+        "documentation": {}
+    },
+    {
+        "label": "handDetector",
+        "kind": 6,
+        "importPath": "code to identify open and close fist",
+        "description": "code to identify open and close fist",
+        "peekOfCode": "class handDetector():\n    def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):\n        self.mode= mode\n        self.maxHands= maxHands\n        self.detectionCon= detectionCon\n        self.trackCon= trackCon\n        self.mpHands= mp.solutions.Hands\n        self.Hands= self.mpHands.Hands(self.mode,self.maxHands,\n        self.detectionCon, self.trackCon)\n        self.mpdraw= mp.solutions.drawing_utils",
+        "detail": "code to identify open and close fist",
+        "documentation": {}
+    },
+    {
+        "label": "findHands",
+        "kind": 2,
+        "importPath": "code to identify open and close fist",
+        "description": "code to identify open and close fist",
+        "peekOfCode": "def findHands(self, img, draw=True):\n    imgRGB= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)\n    self.results = self.hands.process(imgRGB)\n    #print(results.multi_hand_landmarks)\n    if self.results.multi_hand_landmarks:\n        for handLms in self.results.multi_hand_landmarks:\n            if draw:\n                self.mpDraw.draw_landmarks(img, handLms,self.mpHands.HAND_CONNECTIONS)\n                return img\ndef findPosition(self, img, handNo=0, draw=True):",
+        "detail": "code to identify open and close fist",
+        "documentation": {}
+    },
+    {
+        "label": "findPosition",
+        "kind": 2,
+        "importPath": "code to identify open and close fist",
+        "description": "code to identify open and close fist",
+        "peekOfCode": "def findPosition(self, img, handNo=0, draw=True):\n    xList = []\n    yList = []\n    bbox = []\n    self.lmList= []\n    if self.results.multi_hand_landmarks:\n        myHand= self.results.multi_hand_landmarks[handNo]\n        for id, lm in enumerate[myHand.landmark]:\n            #print(id,lm)\n            h, w, c = img.shape",
+        "detail": "code to identify open and close fist",
+        "documentation": {}
+    },
+    {
+        "label": "fingersUp",
+        "kind": 2,
+        "importPath": "code to identify open and close fist",
+        "description": "code to identify open and close fist",
+        "peekOfCode": "def fingersUp(self):\n    fingers = []\n    #THUMB\n    if self.lmList[self.tipIds[0]][1] > self.lmList[self.tipIds[0]-1][1]:\n        fingers.append(1)\n    else:\n        fingers.append(0)\n    #4fingers\n    for id in range(1, 5):\n        if self.lmList[self.tipIds[id]][2] < self.lmList[self.tipIds[id]-2][2]:",
+        "detail": "code to identify open and close fist",
+        "documentation": {}
+    },
+    {
+        "label": "findDistance",
+        "kind": 2,
+        "importPath": "code to identify open and close fist",
+        "description": "code to identify open and close fist",
+        "peekOfCode": "def findDistance(self, p1, p2, img, draw=True):\n    x1, y1 = self.lmList[p1][1], self.lmList[p1][2]\n    x2, y2 = self.lmList[p2][1], self.lmList[p2][2]\n    cx, cy = (x1 + x2) // 2, (y1 + y2) // 2\n    if draw:\n        cv2.circle(img, (x1, y1), 15, (255, 0, 255), cv2.FILLED)\n        cv2.circle(img, (x2, y2), 15, (255, 0, 255), cv2.FILLED)\n        cv2.line(img, (x1, y1), (x2, y2), (255, 0, 255), 3)\n        cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)\n    length= math.hypot(x2-x1,y2-y1)",
+        "detail": "code to identify open and close fist",
+        "documentation": {}
+    },
+    {
+        "label": "mp_hands",
+        "kind": 5,
+        "importPath": "code to identify open and close fist",
+        "description": "code to identify open and close fist",
+        "peekOfCode": "mp_hands = mp.solutions.hands\nhands = mp_hands.Hands()\n# Open a video capture stream (you can also use a webcam or video file)\ncap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        continue\n    # Convert the frame to RGB for processing\n    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)",
+        "detail": "code to identify open and close fist",
+        "documentation": {}
+    },
+    {
+        "label": "hands",
+        "kind": 5,
+        "importPath": "code to identify open and close fist",
+        "description": "code to identify open and close fist",
+        "peekOfCode": "hands = mp_hands.Hands()\n# Open a video capture stream (you can also use a webcam or video file)\ncap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        continue\n    # Convert the frame to RGB for processing\n    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    # Use MediaPipe to detect hands in the frame",
+        "detail": "code to identify open and close fist",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "code to identify open and close fist",
+        "description": "code to identify open and close fist",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        continue\n    # Convert the frame to RGB for processing\n    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\n    # Use MediaPipe to detect hands in the frame\n    results = hands.process(frame_rgb)\n    if results.multi_hand_landmarks:",
+        "detail": "code to identify open and close fist",
+        "documentation": {}
+    },
+    {
+        "label": "drawingModule",
+        "kind": 5,
+        "importPath": "code to recognize hand",
+        "description": "code to recognize hand",
+        "peekOfCode": "drawingModule = mediapipe.solutions.drawing_utils\nhandsModule = mediapipe.solutions.hands\n#Use CV2 Functionality to create a Video stream and add some values\ncap = cv2.VideoCapture(0)\nfourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')\n#Add confidence values and extra settings to MediaPipe hand tracking. As we are using a live video stream this is not a static\n#image mode, confidence values in regards to overall detection and tracking and we will only let two hands be tracked at the same time\n#More hands can be tracked at the same time if desired but will slow down the system\nwith handsModule.Hands(static_image_mode=False, min_detection_confidence=0.7, min_tracking_confidence=0.7, max_num_hands=2) as hands:\n#Create an infinite loop which will produce the live feed to our desktop and that will search for hands",
+        "detail": "code to recognize hand",
+        "documentation": {}
+    },
+    {
+        "label": "handsModule",
+        "kind": 5,
+        "importPath": "code to recognize hand",
+        "description": "code to recognize hand",
+        "peekOfCode": "handsModule = mediapipe.solutions.hands\n#Use CV2 Functionality to create a Video stream and add some values\ncap = cv2.VideoCapture(0)\nfourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')\n#Add confidence values and extra settings to MediaPipe hand tracking. As we are using a live video stream this is not a static\n#image mode, confidence values in regards to overall detection and tracking and we will only let two hands be tracked at the same time\n#More hands can be tracked at the same time if desired but will slow down the system\nwith handsModule.Hands(static_image_mode=False, min_detection_confidence=0.7, min_tracking_confidence=0.7, max_num_hands=2) as hands:\n#Create an infinite loop which will produce the live feed to our desktop and that will search for hands\n     while True:",
+        "detail": "code to recognize hand",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "code to recognize hand",
+        "description": "code to recognize hand",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\nfourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')\n#Add confidence values and extra settings to MediaPipe hand tracking. As we are using a live video stream this is not a static\n#image mode, confidence values in regards to overall detection and tracking and we will only let two hands be tracked at the same time\n#More hands can be tracked at the same time if desired but will slow down the system\nwith handsModule.Hands(static_image_mode=False, min_detection_confidence=0.7, min_tracking_confidence=0.7, max_num_hands=2) as hands:\n#Create an infinite loop which will produce the live feed to our desktop and that will search for hands\n     while True:\n           ret, frame = cap.read()\n           #Unedit the below line if your live feed is produced upsidedown",
+        "detail": "code to recognize hand",
+        "documentation": {}
+    },
+    {
+        "label": "fourcc",
+        "kind": 5,
+        "importPath": "code to recognize hand",
+        "description": "code to recognize hand",
+        "peekOfCode": "fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')\n#Add confidence values and extra settings to MediaPipe hand tracking. As we are using a live video stream this is not a static\n#image mode, confidence values in regards to overall detection and tracking and we will only let two hands be tracked at the same time\n#More hands can be tracked at the same time if desired but will slow down the system\nwith handsModule.Hands(static_image_mode=False, min_detection_confidence=0.7, min_tracking_confidence=0.7, max_num_hands=2) as hands:\n#Create an infinite loop which will produce the live feed to our desktop and that will search for hands\n     while True:\n           ret, frame = cap.read()\n           #Unedit the below line if your live feed is produced upsidedown\n           #flipped = cv2.flip(frame, flipCode = -1)",
+        "detail": "code to recognize hand",
+        "documentation": {}
+    },
+    {
+        "label": "determine_winner",
+        "kind": 2,
+        "importPath": "stone paper scissor",
+        "description": "stone paper scissor",
+        "peekOfCode": "def determine_winner(user_choice, computer_choice):\n    if user_choice == computer_choice:\n        return \"It's a tie!\"\n    elif (\n        (user_choice == \"stone\" and computer_choice == \"scissors\")\n        or (user_choice == \"paper\" and computer_choice == \"stone\")\n        or (user_choice == \"scissors\" and computer_choice == \"paper\")\n    ):\n        return \"You win!\"\n    else:",
+        "detail": "stone paper scissor",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "stone paper scissor",
+        "description": "stone paper scissor",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\n# Dictionary to map numerical key presses to game choices\nchoices = {1: \"stone\", 2: \"paper\", 3: \"scissors\"}\nwhile True:\n    # Capture a frame from the webcam\n    ret, frame = cap.read()\n    # Display game instructions\n    cv2.putText(frame, \"Press 1 for Stone, 2 for Paper, 3 for Scissors\", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)\n    # Show the webcam feed\n    cv2.imshow(\"Stone-Paper-Scissors\", frame)",
+        "detail": "stone paper scissor",
+        "documentation": {}
+    },
+    {
+        "label": "choices",
+        "kind": 5,
+        "importPath": "stone paper scissor",
+        "description": "stone paper scissor",
+        "peekOfCode": "choices = {1: \"stone\", 2: \"paper\", 3: \"scissors\"}\nwhile True:\n    # Capture a frame from the webcam\n    ret, frame = cap.read()\n    # Display game instructions\n    cv2.putText(frame, \"Press 1 for Stone, 2 for Paper, 3 for Scissors\", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)\n    # Show the webcam feed\n    cv2.imshow(\"Stone-Paper-Scissors\", frame)\n    # Check for key press\n    key = cv2.waitKey(1)",
+        "detail": "stone paper scissor",
+        "documentation": {}
+    }
+]
